@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Latest News - Customer Success Stories</title>
+</head>
+
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #1c1c1c;
+        color: #f5f5f5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .newsletter-container {
+        text-align: center;
+        background-color: #282828;
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+        width: 100%;
+        max-width: 900px;
+    }
+
+    .newsletter-form {
+        margin: 20px 0;
+    }
+
+    .email-input {
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 20px;
+        border: none;
+        width: 60%;
+        max-width: 400px;
+        margin-right: 10px;
+    }
+
+    .subscribe-btn {
+        background-color: #f39c12;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 20px;
+        transition: background-color 0.3s ease, transform 0.2s ease
+    }
+
+    .subscribe-btn:hover {
+        background-color: #f1c40f;
+
+        transform: scale(1.05);
+    }
+
+    .subscribe-btn:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.5);
+    }
+
+    .product-spotlight-btn {
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        padding: 15px 30px;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 30px;
+        transition: 0.3s ease;
+        transform: 0.2s ease;
+        margin-top: 20px;
+        position: relative;
+        bottom: 18px;
+    }
+
+    .product-spotlight-btn:hover {
+        background-color: #66bb6a;
+        /* Lighter green on hover */
+        transform: scale(1.05);
+    }
+
+    .product-spotlight-btn:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.5);
+    }
+
+    .stories-container {
+        text-align: center;
+        background-color: #282828;
+        /* Slightly lighter dark background */
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+        width: 100%;
+        max-width: 1000px;
+    }
+
+    .story {
+        display: flex;
+        align-items: center;
+        background-color: #3a3a3a;
+        /* Dark gray for contrast */
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        margin-top: 20px;
+        text-align: left;
+        transition: transform 0.3s ease;
+    }
+
+    .story:hover {
+        transform: translateY(-5px);
+    }
+
+    .story-image {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-right: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .story-info {
+        flex: 1;
+    }
+
+    .story-info h2 {
+        margin: 0 0 10px;
+        font-size: 24px;
+        color: #ffeb3b;
+        /* Bright yellow for story title */
+    }
+
+    .story-info p {
+        margin: 5px 0;
+        line-height: 1.6;
+    }
+</style>
+
+<body>
+    <div class="newsletter-container">
+        <h1>Subscribe to Our Newsletter</h1>
+        <p>Stay updated with our latest products, exclusive offers, and insider tips!</p>
+        <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email" class="email-input" required>
+            <button type="submit" class="subscribe-btn">Subscribe</button>
+        </form>
+        <button class="product-spotlight-btn">Success Stories</button>
+
+        <div class="stories-container">
+            <h1>Customer Success Stories</h1>
+            <p>Discover how our products have transformed the lives of our customers.</p>
+
+            <div class="story">
+                <img src="img/products/p-9.webp" alt="Customer 1" class="story-image">
+                <div class="story-info">
+                    <h2>Transforming Home Decor with Style</h2>
+                    <p><strong>Customer:</strong> Emily Johnson</p>
+                    <p><strong>Location:</strong> Austin, Texas</p>
+                    <p>Emily revamped her living room with our latest collection of modern furniture and decor. The
+                        transformation was not only stunning but also brought a cozy and inviting atmosphere to her
+                        home. "I never imagined my living room could look so stylish and comfortable," says Emily.</p>
+                </div>
+            </div>
+
+            <div class="story">
+                <img src="img/products/p-10.jpg" alt="Customer 2" class="story-image">
+                <div class="story-info">
+                    <h2>Fitness Goals Achieved with Our Equipment</h2>
+                    <p><strong>Customer:</strong> James Lee</p>
+                    <p><strong>Location:</strong> San Francisco, California</p>
+                    <p>James achieved his fitness goals with the help of our state-of-the-art home gym equipment. "The
+                        quality and functionality are top-notch," James shares. "I’ve never felt more motivated to work
+                        out at home."</p>
+                </div>
+            </div>
+
+            <div class="story">
+                <img src="img/products/p-12.jpg" alt="Customer 3" class="story-image">
+                <div class="story-info">
+                    <h2>Wedding Bliss with Our Elegant Jewelry</h2>
+                    <p><strong>Customer:</strong> Sarah and Michael Bennett</p>
+                    <p><strong>Location:</strong> New York, New York</p>
+                    <p>Sarah and Michael's wedding day was made even more special with our exclusive jewelry collection.
+                        "The pieces were exquisite and perfectly complemented our wedding attire," they recall. Their
+                        elegant look was featured in a bridal magazine.</p>
+                </div>
+            </div>
+
+            <div class="story">
+                <img src="img/people/p-11.webp" alt="Customer 4" class="story-image">
+                <div class="story-info">
+                    <h2>Delicious Meals Made Easy</h2>
+                    <p><strong>Customer:</strong> Laura Martinez</p>
+                    <p><strong>Location:</strong> Miami, Florida</p>
+                    <p>With our premium kitchen appliances, Laura has been whipping up delicious meals for her family.
+                        "Cooking has become a joy rather than a chore," she says. Her culinary creations have been a hit
+                        at family gatherings and dinner parties.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

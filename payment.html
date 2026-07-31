@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cara - The Best e commerce plateform</title>
+    <script src="https://kit.fontawesome.com/92d70a2fd8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="payment.css">
+</head>
+
+<body>
+    <section id="header">
+        <a href="#"><img src="img/logo.png" class="logo" alt=""></a>
+        <div>
+            <ul id="nav-bar">
+                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="shop.html">shop</a></li>
+                <li><a href="blog.html">blog</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <header class="header">
+        <div class="header-content">
+            <h1>Cara Clothing</h1>
+            <p>"Fashion is the armor to survive the reality of everyday life." – Bill Cunningham</p>
+        </div>
+    </header>
+
+    <div class="order-summary">
+        <h2>Your Order</h2>
+        <div id="orderItems"></div>
+        <div class="total-price">
+            <h3>Total: $<span id="totalPrice">0.00</span></h3>
+        </div>
+    </div>
+
+    <div class="order-container">
+        <form action="#" method="post">
+            <div class="payment-methods">
+                <h3>Select Payment Method</h3>
+                <div class="method">
+                    <input type="radio" id="credit-card" name="payment" value="credit-card" checked>
+                    <label for="credit-card">Credit/Debit Card</label>
+                    <div class="card-details">
+                        <input type="text" placeholder="Card Number" required>
+                        <input type="text" placeholder="Name on Card" required>
+                        <div class="card-info">
+                            <input type="text" placeholder="Expiry MM/YY" required>
+                            <input type="text" placeholder="CVV" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="method">
+                    <input type="radio" id="bank-transfer" name="payment" value="bank-transfer">
+                    <label for="bank-transfer">Bank Transfer</label>
+                    <div class="bank-details">
+                        <input type="text" placeholder="Account Holder Name" required>
+                        <input type="text" placeholder="Account Number" required>
+                        <input type="text" placeholder="Bank Name" required>
+                        <input type="text" placeholder="SWIFT/BIC" required>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="order-button">Confirm Order</button>
+        </form>
+    </div>
+
+    <footer class="section-p1 s-1">
+        <div class="col">
+            <img class="logo" src="img/logo.png" alt="">
+            <h4>Contact</h4>
+            <p><strong>Adress: </strong>154-4/A Street # 11, D.H.A Main, Blvd, D.H.A Phase # 03, Lahore</p>
+            <p><strong>Phone No: </strong>+92 328 8006984</p>
+            <p><strong>No of hours: </strong>10:00 am - 07:00 pm, Monday - Saturday</p>
+            <div class="follow">
+                <h4>Follow us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About us</a>
+            <a href="#">Delivery information</a>
+            <a href="#">Privacy policy</a>
+            <a href="#">Terms & conditions</a>
+            <a href="#">contact us</a>
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">sign in</a>
+            <a href="#">view cart</a>
+            <a href="#">My wishlist</a>
+            <a href="#">Track my order</a>
+            <a href="#">Help</a>
+        </div>
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App store or google play store</p>
+            <div class="row">
+                <img src="img/pay/app.jpg" alt="">
+                <img src="img/pay/play.jpg" alt="">
+            </div>
+            <p>Secured payment gateways</p>
+            <img src="img/pay/pay.png" alt="">
+        </div>
+        <div class="copyright">
+            <p>© 2024, Cara - The best e commerce plateform</p>
+        </div>
+    </footer>
+
+    <script>
+        const orderItems = JSON.parse(localStorage.getItem('cart'));
+        let totalPrice = 0;
+        const orderItemsContainer = document.getElementById('orderItems');
+
+        if (orderItems && orderItems.length > 0) {
+            orderItems.forEach(item => {
+                const itemTotal = item.price * item.quantity;
+                totalPrice += itemTotal;
+                orderItemsContainer.innerHTML += `
+                    <div class="order-item">
+                        <div>
+                            <img src="${item.image}" alt="${item.title}">
+                            <p>${item.title} (x${item.quantity})</p>
+                        </div>
+                        <p>$${itemTotal}.00</p>
+                    </div>
+                `;
+            });
+            document.getElementById('totalPrice').textContent = totalPrice.toFixed(2);
+        } else {
+            orderItemsContainer.innerHTML = "<p>Your order is empty.</p>";
+        }
+        function createOrderPopup() {
+            const popup = document.createElement('div');
+            popup.id = 'order-popup';
+            popup.style.position = 'fixed';
+            popup.style.top = '50%';
+            popup.style.left = '50%';
+            popup.style.transform = 'translate(-50%, -50%)';
+            popup.style.width = '300px';
+            popup.style.padding = '20px';
+            popup.style.background = 'linear-gradient(135deg, #ff7e5f, #feb47b)';
+            popup.style.color = 'white';
+            popup.style.borderRadius = '10px';
+            popup.style.boxShadow = '0px 0px 15px rgba(0, 0, 0, 0.3)';
+            popup.style.textAlign = 'center';
+            popup.style.zIndex = '1000';
+            popup.style.transition = 'opacity 0.3s ease';
+            popup.style.opacity = '0';
+            popup.style.pointerEvents = 'none';
+            
+            const content = document.createElement('div');
+            content.style.marginBottom = '20px';
+        
+            const message = document.createElement('h2');
+            message.textContent = 'Your order has been placed successfully!';
+            message.style.fontSize = '18px';
+        
+            const closeButton = document.createElement('button');
+            closeButton.textContent = 'Close';
+            closeButton.style.background = 'white';
+            closeButton.style.color = '#ff7e5f';
+            closeButton.style.border = 'none';
+            closeButton.style.padding = '10px 20px';
+            closeButton.style.borderRadius = '5px';
+            closeButton.style.cursor = 'pointer';
+            closeButton.style.fontWeight = 'bold';
+            closeButton.style.transition = 'background 0.3s ease';
+            
+            closeButton.addEventListener('mouseover', function() {
+                closeButton.style.background = '#ffd1b9';
+            });
+            
+            closeButton.addEventListener('mouseout', function() {
+                closeButton.style.background = 'white';
+            });
+            content.appendChild(message);
+            content.appendChild(closeButton);
+            popup.appendChild(content);
+            document.body.appendChild(popup);
+        
+            closeButton.addEventListener('click', function() {
+                popup.style.opacity = '0';
+                popup.style.pointerEvents = 'none';
+                setTimeout(() => popup.remove(), 300);
+            });
+        
+            return popup;
+        }
+        
+        function showOrderPopup() {
+            const popup = createOrderPopup();
+            popup.style.opacity = '1';
+            popup.style.pointerEvents = 'auto';
+        }
+        document.querySelector('.order-button').addEventListener('click', function(event) {
+            event.preventDefault();
+            showOrderPopup();
+        });
+    </script>
+</body>
+
+</html>

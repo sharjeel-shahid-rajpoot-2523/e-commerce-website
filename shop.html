@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cara - The Best e commerce plateform</title>
+    <link rel="stylesheet" href="shop.css">
+    <script src="https://kit.fontawesome.com/92d70a2fd8.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <a href="#"><img src="img/logo.png" class="logo" alt=""></a>
+        <div>
+            <ul id="nav-bar">
+                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="shop.html">shop</a></li>
+                <li><a href="blog.html">blog</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+            </ul>
+        </div>
+        <div class="cart">
+            <p id="cart-count">0</p>
+            <i class="fa-solid fa-shopping-cart"></i>
+        </div>
+
+    </div>
+
+    <select id="category-select">
+        <option value="option">Select a category</option>
+    </select>
+    <button id="search-btn">Search</button>
+    <div id="root"></div>
+    <div id="cart">
+        <span id="cart-count">0</span>
+    </div>
+
+    <div class="container">
+        <div id="root"></div>
+        <div class="sidebar">
+            <div class="head">
+                <p>My Cart</p>
+            </div>
+            <div id="cartItem">Your cart is empty</div>
+            <div class="foot">
+                <h3>Total</h3>
+                <h2 id="total">$ 0.00</h2>
+            </div>
+            <a href="payment.html"><button class="normal">Order Now</button></a>
+        </div>
+    </div>
+
+    <div id="popup" class="popup hidden">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <img id="popup-image" src="" alt="Product Image">
+            <p id="popup-title"></p>
+            <h2 id="popup-price"></h2>
+            <label for="size-select">Select Size:</label>
+            <select id="size-select">
+                <option value="S">Small</option>
+                <option value="M">Medium</option>
+                <option value="L">Large</option>
+                <option value="XL">Extra Large</option>
+            </select>
+            <label for="quantity-input">Quantity:</label>
+            <div class="quantity-control">
+                <button style="color: #000;" onclick="changeQuantity(-1)">-</button>
+                <input type="text" id="quantity-input" value="1" readonly>
+                <button style="color: #000;" onclick="changeQuantity(1)">+</button>
+            </div>
+            <button onclick="confirmAddToCart()">Add to Cart</button>
+        </div>
+    </div>
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="img/logo.png" alt="">
+            <h4>Contact</h4>
+            <p><strong>Adress: </strong>154-4/A Street # 11, D.H.A Main, Blvd, D.H.A Phase # 03, Lahore</p>
+            <p><strong>Phone No: </strong>+92 328 8006984
+            <p><strong>No of hours: </strong>10:00 am - 07:00 pm, Monday - Saturday</p>
+            <div class="follow">
+                <h4>Follow us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About us</a>
+            <a href="#">Delivery information</a>
+            <a href="#">Privacy policy</a>
+            <a href="#">Terms & conditions</a>
+            <a href="#">contact us</a>
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">sign in</a>
+            <a href="#">view cart</a>
+            <a href="#">My wishlist</a>
+            <a href="#">Track my order</a>
+            <a href="#">Help</a>
+        </div>
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App store or google play store</p>
+            <div class="row">
+                <img src="img/pay/app.jpg" alt="">
+                <img src="img/pay/play.jpg" alt="">
+            </div>
+            <p>Secured payment gateways</p>
+            <img src="img/pay/pay.png" alt="">
+        </div>
+        <div class="copyright">
+            <p>© 2024, Cara - The best e commerce plateform</p>
+        </div>
+    </footer>
+    <script src="shop.js"></script>
+</body>
+
+</html>

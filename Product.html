@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latest News - Upcoming Product Spotlight</title>
+</head>
+
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #1c1c1c;
+        color: #f5f5f5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .newsletter-container {
+        text-align: center;
+        background-color: #282828;
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+        width: 100%;
+        max-width: 900px;
+    }
+
+    .newsletter-form {
+        margin: 20px 0;
+    }
+
+    .email-input {
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 20px;
+        border: none;
+        width: 60%;
+        max-width: 400px;
+        margin-right: 10px;
+    }
+
+    .subscribe-btn {
+        background-color: #f39c12;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 20px;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .subscribe-btn:hover {
+        background-color: #f1c40f;
+        transform: scale(1.05);
+    }
+
+    .subscribe-btn:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.5);
+    }
+
+    .product-spotlight-btn {
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        padding: 15px 30px;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 30px;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        margin-top: 20px;
+        position: relative;
+        bottom: 18px;
+    }
+
+    .product-spotlight-btn:hover {
+        background-color: #66bb6a;
+        transform: scale(1.05);
+    }
+
+    .product-spotlight-btn:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.5);
+    }
+
+    .spotlight-section {
+        margin-top: 40px;
+        text-align: left;
+    }
+
+    .product {
+        display: flex;
+        align-items: center;
+        background-color: #3a3a3a;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        margin-top: 20px;
+    }
+
+    .product-image {
+        width: 150px;
+        height: 150px;
+        border-radius: 8px;
+        margin-right: 20px;
+    }
+
+    .product-info {
+        flex: 1;
+    }
+
+    .product-info h3 {
+        margin: 0 0 10px;
+        font-size: 24px;
+        color: #ffeb3b;
+    }
+
+    .product-info p {
+        margin: 5px 0;
+    }
+
+    .buy-now-btn {
+        background-color: #2196f3;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 20px;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .buy-now-btn:hover {
+        background-color: #42a5f5;
+        transform: scale(1.05);
+    }
+
+    .buy-now-btn:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.5);
+    }
+</style>
+
+<body>
+    <div class="newsletter-container">
+        <h1>Subscribe to Our Newsletter</h1>
+        <p>Stay updated with our latest products, exclusive offers, and insider tips!</p>
+        <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email" class="email-input" required>
+            <button type="submit" class="subscribe-btn">Subscribe</button>
+        </form>
+
+        <div class="spotlight-section">
+            <h2>Upcoming Product Spotlight</h2>
+            <div class="product">
+                <img src="img/products/p-1.jpeg" alt="Eco-Friendly Bamboo Sunglasses" class="product-image">
+                <div class="product-info">
+                    <h3>Eco-Friendly Bamboo Sunglasses</h3>
+                    <p>Discover the perfect blend of style and sustainability with our eco-friendly bamboo sunglasses.
+                        Lightweight, durable, and designed for the conscious consumer.</p>
+                    <p><strong>Price:</strong> $59.99</p>
+                    <button class="buy-now-btn">Notify me</button>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="img/products/p-2.jpeg" alt="Wireless Noise-Cancelling Headphones" class="product-image">
+                <div class="product-info">
+                    <h3>Wireless Noise-Cancelling Headphones</h3>
+                    <p>Immerse yourself in your favorite music with our top-of-the-line wireless noise-cancelling
+                        headphones. Enjoy superior sound quality and long-lasting comfort.</p>
+                    <p><strong>Price:</strong> $199.99</p>
+                    <button class="buy-now-btn">Notify me</button>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="img/products/p-3.webp" alt="Smart Fitness Tracker" class="product-image">
+                <div class="product-info">
+                    <h3>Smart Fitness Tracker</h3>
+                    <p>Track your fitness journey with precision. This smart fitness tracker offers real-time heart rate
+                        monitoring, GPS tracking, and a long-lasting battery.</p>
+                    <p><strong>Price:</strong> $79.99</p>
+                    <button class="buy-now-btn">Notify me</button>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="img/products/p-4.jpeg" alt="Luxury Scented Candles" class="product-image">
+                <div class="product-info">
+                    <h3>Luxury Scented Candles</h3>
+                    <p>Enhance your home ambiance with our luxury scented candles. Made from natural wax, each candle
+                        offers a unique fragrance to relax your mind.</p>
+                    <p><strong>Price:</strong> $29.99</p>
+                    <button class="buy-now-btn">Notify me</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    const notifyButtons = document.querySelectorAll(".buy-now-btn");
+
+    notifyButtons.forEach(button => {
+        button.addEventListener("click", function() {
+            const popup = document.createElement("div");
+            popup.style.position = "fixed";
+            popup.style.top = "50%";
+            popup.style.left = "50%";
+            popup.style.transform = "translate(-50%, -50%)";
+            popup.style.background = "linear-gradient(to right, #4caf50, #8bc34a)";
+            popup.style.color = "white";
+            popup.style.padding = "35px"; 
+            popup.style.borderRadius = "8px";
+            popup.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.2)";
+            popup.style.zIndex = "1000";
+            popup.style.fontSize = "18px";
+            popup.style.fontWeight = "bold";
+            popup.style.textAlign = "center";
+            popup.textContent = "Thanks for subscribing to our newsletter!! You will be notified when our products are live.";
+
+            document.body.appendChild(popup);
+
+            setTimeout(function() {
+                popup.remove();
+            }, 3000);
+        });
+    });
+});
+    </script>
+</body>
+
+</html>

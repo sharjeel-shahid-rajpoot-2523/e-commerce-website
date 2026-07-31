@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Latest News - Upcoming Events</title>
+</head>
+
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #1c1c1c;
+        color: #f5f5f5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .newsletter-container {
+        text-align: center;
+        background-color: #282828;
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+        width: 100%;
+        max-width: 900px;
+    }
+
+    .newsletter-form {
+        margin: 20px 0;
+    }
+
+    .email-input {
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 20px;
+        border: none;
+        width: 60%;
+        max-width: 400px;
+        margin-right: 10px;
+    }
+
+    .subscribe-btn {
+        background-color: #f39c12;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 20px;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .subscribe-btn:hover {
+        background-color: #f1c40f;
+        transform: scale(1.05);
+    }
+
+    .subscribe-btn:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.5);
+    }
+
+    .product-spotlight-btn {
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        padding: 15px 30px;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 30px;
+        transition: 0.3s ease;
+        transform: 0.2s ease;
+        margin-top: 20px;
+        position: relative;
+        bottom: 18px;
+    }
+
+    .product-spotlight-btn:hover {
+        background-color: #66bb6a;
+        transform: scale(1.05);
+    }
+
+    .product-spotlight-btn:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.5);
+    }
+
+    .events-container {
+        text-align: center;
+        background-color: #282828;
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+        width: 100%;
+        max-width: 1000px;
+    }
+
+    .event {
+        display: flex;
+        align-items: center;
+        background-color: #3a3a3a;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        margin-top: 20px;
+        text-align: left;
+        transition: transform 0.3s ease;
+    }
+
+    .event:hover {
+        transform: translateY(-5px);
+    }
+
+    .event-image {
+        width: 150px;
+        height: 150px;
+        border-radius: 8px;
+        margin-right: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .event-info {
+        flex: 1;
+    }
+
+    .event-info h2 {
+        margin: 0 0 10px;
+        font-size: 24px;
+        color: #ffeb3b;
+    }
+
+    .event-info p {
+        margin: 5px 0;
+        line-height: 1.6;
+    }
+
+    .notify-me-btn {
+        background-color: #e91e63;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 20px;
+        transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+        box-shadow: 0 4px 6px rgba(233, 30, 99, 0.3);
+        margin-top: 10px;
+    }
+
+    .notify-me-btn:hover {
+        background-color: #f06292;
+        transform: scale(1.05);
+        box-shadow: 0 6px 8px rgba(233, 30, 99, 0.5);
+    }
+
+    .notify-me-btn:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(233, 30, 99, 0.5);
+    }
+
+    .popup-message {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #333;
+        color: #fff;
+        padding: 20px 40px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        text-align: center;
+        font-size: 18px;
+        display: none;
+        z-index: 9999;
+    }
+
+    .popup-message.show {
+        display: block;
+    }
+</style>
+
+<body>
+    <div class="newsletter-container">
+        <h1>Subscribe to Our Newsletter</h1>
+        <p>Stay updated with our latest products, exclusive offers, and insider tips!</p>
+        <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email" class="email-input" required>
+            <button type="submit" class="subscribe-btn">Subscribe</button>
+        </form>
+
+        <div class="events-container">
+            <h1>Upcoming Events</h1>
+            <p>Join us for exciting events and stay updated with the latest happenings!</p>
+
+            <div class="event">
+                <img src="img/products/p-5.jpg!w700wp" alt="Summer Sale Extravaganza" class="event-image">
+                <div class="event-info">
+                    <h2>Summer Sale Extravaganza</h2>
+                    <p>Join us for our annual Summer Sale Extravaganza! Enjoy exclusive discounts on our top products.
+                        Don’t miss out!</p>
+                    <p><strong>Date:</strong> August 15, 2024</p>
+                    <p><strong>Location:</strong> Online & In-Store</p>
+                    <p><strong>Highlights:</strong> Discounts up to 70% on selected items, free shipping on orders over
+                        $50, and a chance to win a $500 gift card!</p>
+                    <button class="notify-me-btn">Notify Me</button>
+                </div>
+            </div>
+
+            <div class="event">
+                <img src="img/products/p-6.webp" alt="Product Launch Webinar" class="event-image">
+                <div class="event-info">
+                    <h2>Product Launch Webinar</h2>
+                    <p>Be the first to know about our latest product innovations. Join our live webinar and get
+                        exclusive insights from our team.</p>
+                    <p><strong>Date:</strong> September 5, 2024</p>
+                    <p><strong>Location:</strong> Online</p>
+                    <p><strong>Speakers:</strong> Meet our product designers and engineers, and ask your questions live!
+                    </p>
+                    <button class="notify-me-btn">Notify Me</button>
+                </div>
+            </div>
+
+            <div class="event">
+                <img src="img/products/p-7.jpg" alt="Customer Appreciation Day" class="event-image">
+                <div class="event-info">
+                    <h2>Customer Appreciation Day</h2>
+                    <p>We appreciate our customers! Join us for a day full of fun activities, giveaways, and exclusive
+                        offers as a thank you for your support.</p>
+                    <p><strong>Date:</strong> October 10, 2024</p>
+                    <p><strong>Location:</strong> All Store Locations</p>
+                    <p><strong>Activities:</strong> Live music, free samples, and an exclusive gift for the first 100
+                        customers at each location.</p>
+                    <button class="notify-me-btn">Notify Me</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Pop-up message -->
+    <div class="popup-message" id="popup-message">
+        Thanks for subscribing to our newsletter!! You will be notified when our products are live.
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const notifyButtons = document.querySelectorAll(".notify-me-btn");
+
+            notifyButtons.forEach(button => {
+                button.addEventListener("click", function () {
+                    // Create the pop-up container
+                    const popup = document.createElement("div");
+                    popup.style.position = "fixed";
+                    popup.style.top = "50%";
+                    popup.style.left = "50%";
+                    popup.style.transform = "translate(-50%, -50%)";
+                    popup.style.background = "linear-gradient(to right, #4caf50, #8bc34a)";
+                    popup.style.color = "white";
+                    popup.style.padding = "35px";
+                    popup.style.borderRadius = "8px";
+                    popup.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.2)";
+                    popup.style.zIndex = "1000";
+                    popup.style.fontSize = "18px";
+                    popup.style.fontWeight = "bold";
+                    popup.textContent = "Thanks for subscribing newsletter. You will be notified when organized any live events";
+
+                    document.body.appendChild(popup);
+
+                    setTimeout(function () {
+                        popup.remove();
+                    }, 1000);
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Our New Professional Designers Projects</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<style>
+    body {
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f4f8;
+        color: #333;
+        overflow-x: hidden;
+    }
+
+    header {
+        background-color: #088178;
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        position: relative;
+        overflow: hidden;
+    }
+
+    header::after {
+        content: "";
+        background: rgba(255, 255, 255, 0.1);
+        width: 200%;
+        height: 100px;
+        position: absolute;
+        top: -50px;
+        left: -50px;
+        animation: slide 5s infinite linear;
+    }
+
+    h1 {
+        margin: 0;
+        font-size: 32px;
+    }
+
+    .subtitle {
+        font-size: 18px;
+        color: #c0c0c0;
+        margin-top: 5px;
+    }
+
+    main {
+        max-width: 800px;
+        margin: 30px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        animation: fadeIn 1s ease-in;
+    }
+
+    article {
+        margin-top: 20px;
+    }
+
+    .featured-image {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        transition: transform 0.3s ease;
+    }
+
+    .featured-image:hover {
+        transform: scale(1.05);
+    }
+
+    p {
+        margin-bottom: 15px;
+    }
+
+    h2 {
+        color: #088178;
+        margin-bottom: 10px;
+        position: relative;
+    }
+
+    h2::after {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 3px;
+        background: #35495e;
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+    }
+
+    ul,
+    ol {
+        margin: 10px 0;
+        padding-left: 20px;
+    }
+
+    li {
+        margin-bottom: 5px;
+    }
+
+    blockquote {
+        background-color: #e0e7ec;
+        border-left: 5px solid #35495e;
+        margin: 20px 0;
+        padding: 10px 20px;
+        font-style: italic;
+        color: #555;
+        position: relative;
+        overflow: hidden;
+    }
+
+    blockquote::before {
+        content: open-quote;
+        font-size: 4rem;
+        position: absolute;
+        left: 10px;
+        top: -10px;
+        color: #35495e;
+        opacity: 0.1;
+    }
+
+    strong {
+        color: #35495e;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes slide {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+</style>
+
+<body>
+    <section id="header">
+        <a href="#"><img src="img/logo.png" class="logo" alt=""></a>
+        <div>
+            <ul id="nav-bar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">shop</a></li>
+                <li><a class="active" href="blog.html">blog</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <header>
+        <h1>Our New Professional Designers Projects</h1>
+        <p class="subtitle" style="color: white;;">Innovative ideas shaping the future of fashion</p>
+    </header>
+    <main>
+        <article>
+            <img src="img/blog/bg_4.jpg" alt="Designers Projects" class="featured-image">
+            <section>
+                <p>
+                    At the heart of our brand, we believe in pushing boundaries and redefining fashion with every new
+                    project. Our team of professional designers is dedicated to creating unique and trendsetting pieces
+                    that capture the essence of modern style.
+                </p>
+                <p>
+                    From conceptualization to execution, each project is a testament to our commitment to quality and
+                    innovation. Join us as we explore the creative journeys of our talented designers and their latest
+                    projects.
+                </p>
+                <h2>Featured Projects</h2>
+                <ul>
+                    <li>Eco-Friendly Fashion Line</li>
+                    <li>Tech-Integrated Wearables</li>
+                    <li>Minimalist Chic Collection</li>
+                    <li>Customizable Apparel Series</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Meet Our Designers</h2>
+                <p>
+                    Our designers come from diverse backgrounds, each bringing a unique perspective and skill set to our
+                    projects. With a shared passion for fashion and innovation, they collaborate to create pieces that
+                    inspire and excite.
+                </p>
+                <p>
+                    From experienced industry veterans to fresh new talents, our team is committed to excellence and
+                    creativity in every design. Discover more about their inspirations and the stories behind their
+                    work.
+                </p>
+            </section>
+
+            <section>
+                <h2>Customer Feedback</h2>
+                <blockquote>
+                    "The attention to detail in these designs is unmatched. Each piece feels like a work of art." –
+                    Emily R.
+                </blockquote>
+                <blockquote>
+                    "I love how these projects combine style with sustainability. It's exciting to see fashion evolve
+                    this way." – Daniel K.
+                </blockquote>
+            </section>
+
+            <section>
+                <h2>Design Philosophy</h2>
+                <p>
+                    Our design philosophy centers on three core principles:
+                </p>
+                <ol>
+                    <li>Innovation: Constantly pushing the boundaries of what is possible in fashion.</li>
+                    <li>Sustainability: Creating designs that respect our planet and future generations.</li>
+                    <li>Inclusivity: Ensuring our designs are accessible and inspiring to all.</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Behind the Scenes</h2>
+                <p>
+                    Take a glimpse into our creative process with behind-the-scenes insights from our design team. Learn
+                    how ideas are transformed into stunning pieces of fashion, and see the passion and dedication that
+                    goes into every project.
+                </p>
+                <p>
+                    Our designers are constantly experimenting with new techniques and materials, striving to create
+                    innovative designs that redefine modern fashion.
+                </p>
+            </section>
+
+            <section>
+                <h2>Frequently Asked Questions</h2>
+                <p>
+                    <strong>Q: How often do you release new designer projects?</strong><br>
+                    A: We aim to introduce new projects each season, reflecting the latest trends and innovations.
+                </p>
+                <p>
+                    <strong>Q: Are your designs available for purchase?</strong><br>
+                    A: Yes, our designs can be purchased through our website and selected retailers.
+                </p>
+            </section>
+
+            <section>
+                <p>
+                    Discover the future of fashion with our new professional designers' projects. Join us on this
+                    journey of creativity and innovation as we continue to push the boundaries of style.
+                </p>
+            </section>
+        </article>
+    </main>
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="img/logo.png" alt="">
+            <h4>Contact</h4>
+            <p><strong>Adress: </strong>154-4/A Street # 11, D.H.A Main, Blvd, D.H.A Phase # 03, Lahore</p>
+            <p><strong>Phone No: </strong>+92 328 8006984</p>
+            <p><strong>No of hours: </strong>10:00 am - 07:00 pm, Monday - Saturday</p>
+            <div class="follow">
+                <h4>Follow us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About us</a>
+            <a href="#">Delivery information</a>
+            <a href="#">Privacy policy</a>
+            <a href="#">Terms & conditions</a>
+            <a href="#">contact us</a>
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">sign in</a>
+            <a href="#">view cart</a>
+            <a href="#">My wishlist</a>
+            <a href="#">Track my order</a>
+            <a href="#">Help</a>
+        </div>
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App store or google play store</p>
+            <div class="row">
+                <img src="img/pay/app.jpg" alt="">
+                <img src="img/pay/play.jpg" alt="">
+            </div>
+            <p>Secured payment gateways</p>
+            <img src="img/pay/pay.png" alt="">
+        </div>
+        <div class="copyright">
+            <p>© 2024, Cara - The best e commerce plateform</p>
+        </div>
+    </footer>
+</body>
+
+</html>
