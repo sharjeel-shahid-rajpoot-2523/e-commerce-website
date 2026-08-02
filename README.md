@@ -1,11 +1,11 @@
-A modern, responsive e-commerce website built using **HTML**, **CSS**, and **JavaScript**. This project provides a clean shopping experience with multiple pages, product showcases, promotional sections, and a user-friendly interface.
+<img width="1160" height="380" alt="image" src="https://github.com/user-attachments/assets/39f4e958-7c6b-48bb-a919-4fc4605d91c3" />A modern, responsive e-commerce website built using **HTML**, **CSS**, and **JavaScript**. This project provides a clean shopping experience with multiple pages, product showcases, promotional sections, and a user-friendly interface.
 
 _____________________________________________________________________________________________________________________________________________________________________________
 
 🚀 Live Demo
 _____________________________________________________________________________________________________________________________________________________________________________
 
-> https://sharjeel-shahid-rajpoot-2523.github.io/e-commerce-website/
+> https://e-commerce-website-iota-lyart.vercel.app/
 
 _____________________________________________________________________________________________________________________________________________________________________________
 
